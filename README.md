@@ -26,7 +26,7 @@
 ___
 
 # **Images:**
-![alt text](b8e73ede-ec21-47c4-bc08-22c5ff2e79a8.jpg)
+![alt text](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/images/logo.png)
 
 ![alt text](image-2.png)
 
