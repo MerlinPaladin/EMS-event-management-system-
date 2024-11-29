@@ -10,7 +10,7 @@
     + Встроенная система push-уведомлений обеспечивает безопасность при редактировании профиля.
 
 # `Image of the logo.`
-![alt text](logo.png)
+![alt text](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/images/logo.png)
 
 2. **Technology of the creation**
 + `FrontEnd`:
@@ -26,7 +26,6 @@
 ___
 
 # **Images:**
-![alt text](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/images/logo.png)
 
 ![alt text](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/images/image-2.png)
 
