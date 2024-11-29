@@ -28,8 +28,10 @@ ___
 # **Images:**
 ![alt text](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/images/logo.png)
 
-![alt text](image-2.png)
+![alt text](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/images/image-2.png)
 
-![alt text](image-3.png)
+![alt text](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/images/image-3.png)
 
-![alt text](image-4.png)
+![alt text](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/images/image-4.png)
+
+![alt text](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/images/main_image.jpg)
