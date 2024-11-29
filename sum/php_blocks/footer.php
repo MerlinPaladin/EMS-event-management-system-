@@ -1,0 +1,1 @@
+<footer>worldofevents.ru|Все права защищены 2024</footer>
