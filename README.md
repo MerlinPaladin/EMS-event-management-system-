@@ -16,10 +16,11 @@
 + `FrontEnd`:
     + **Css**
     + **Html**
-    + **Symphony**
+    + **Laravel**
 
 + `BackEnd`:
     + **PHP v-8.1-8.2**
+    + **Laravel**
 
 + `Database`;
     + **MySql**
