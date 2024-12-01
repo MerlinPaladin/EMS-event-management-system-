@@ -17,6 +17,7 @@
     + **Css**
     + **Html**
     + **Laravel**
+    + **JavaScript**
 
 + `BackEnd`:
     + **PHP v-8.1-8.2**
