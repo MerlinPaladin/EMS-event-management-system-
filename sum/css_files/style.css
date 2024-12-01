@@ -1,0 +1,15 @@
+html{
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url("../images/juan-davila-P8PlK2nGwqA-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+button:hover{
+    cursor: pointer;
+}
