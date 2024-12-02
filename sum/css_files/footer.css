@@ -1,0 +1,29 @@
+/* свойства футера */
+.page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #333;
+  text-align: center;
+  font-size: x-large;
+  opacity: 0.7;
+  height: 50px;
+  border-radius: 5px;
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.page-footer.fixed-bottom {
+  position: fixed;
+  font-size: x-large;
+  color: #ffffff;
+  opacity: 0.7;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  border-radius: 5px;
+}
