@@ -1,0 +1,19 @@
+/* глобальные свойства(фоновое изображение и расположение элементов) */
+html {
+  font-family: "Times New Roman", Times, serif;
+  background-image: url("../images/juan-davila-P8PlK2nGwqA-unsplash\ \(1\).jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid #415741;
+  border-radius: 5px;
+}
+
+/* изменение курсора при наведении для всех кнопок */
+button:hover {
+  cursor: pointer;
+}
