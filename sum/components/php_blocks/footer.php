@@ -1,0 +1,1 @@
+<footer class="page-footer">Все права защищены 2024</footer>
