@@ -108,3 +108,159 @@ document.addEventListener("DOMContentLoaded", function () {
     regis_modal_form.style.display = "flex";
   });
 });
+
+
+//local storage way
+document.addEventListener("DOMContentLoaded", function () {
+  // переменные для регистрации
+  const regis_bt = document.querySelector("#register_button");
+  const regis_cl = document.querySelector(".exit_4");
+  const regis_modal_form = document.querySelector(".registration_modal_form");
+
+  // переменные для обратной связи
+  const sp = document.querySelector(".js-sup-modal-wrapper");
+  const sp_interaction = document.querySelector(".support");
+  const sp_cl = document.querySelector(".exit_1");
+
+  // переменные для таблицы с мероприятиями
+  const event_table_close = document.querySelector(".exit_3");
+  const event_block = document.querySelector(".main_table_with_events");
+  const event_block_show = document.querySelector("#events");
+
+  // переменные для ознакомления
+  const btn_info = document.querySelector(".about_us");
+  const btn_wrapper = document.querySelector(".js-modal-wrapper");
+
+  //переменные для работы с блоком идентификации и регистрации
+  const lgn_fr = document.querySelector(".login_form");
+  const lgn_fr_cl = document.querySelector(".exit_5");
+  const regis_show_up = document.querySelector("#regis_form_show_up");
+  const appear_lg_form = document.querySelector(".login_btn");
+
+  const closeAllModals = () => {
+    sp.style.display = "none";
+    event_block.style.display = "none";
+    btn_wrapper.style.display = "none";
+    regis_modal_form.style.display = "none";
+    lgn_fr.style.display = "none";
+
+    // Сохранение состояний в localStorage
+    localStorage.setItem("modals", JSON.stringify({
+      sp: false,
+      event_block: false,
+      btn_wrapper: false,
+      regis_modal_form: false,
+      lgn_fr: false
+    }));
+  };
+
+  const toggleModal = (modalElement, displayStyle, modalKey) => {
+    if (modalElement.style.display === displayStyle) {
+      modalElement.style.display = "none";
+      saveModalState(modalKey, false);
+    } else {
+      closeAllModals();
+      modalElement.style.display = displayStyle;
+      saveModalState(modalKey, true);
+    }
+  };
+
+  const saveModalState = (key, state) => {
+    let modals = JSON.parse(localStorage.getItem("modals")) || {};
+    modals[key] = state;
+    localStorage.setItem("modals", JSON.stringify(modals));
+  };
+
+  const initializeModals = () => {
+    let modalStates = JSON.parse(localStorage.getItem("modals")) || {};
+    for (const [key, value] of Object.entries(modalStates)) {
+      if (value) {
+        switch (key) {
+          case 'sp':
+            sp.style.display = "block";
+            break;
+          case 'event_block':
+            event_block.style.display = "flex";
+            break;
+          case 'btn_wrapper':
+            btn_wrapper.style.display = "block";
+            break;
+          case 'regis_modal_form':
+            regis_modal_form.style.display = "flex";
+            break;
+          case 'lgn_fr':
+            lgn_fr.style.display = "flex";
+            break;
+        }
+      }
+    }
+  };
+
+  // Инициализация модальных окон при загрузке страницы
+  initializeModals();
+
+  // Обработчик клика для блока с ознакомлением
+  btn_info.addEventListener("click", () => {
+    toggleModal(btn_wrapper, "block", "btn_wrapper");
+    if (btn_wrapper.innerHTML === "") {
+      btn_wrapper.innerHTML =
+        "<div class='info_block'><h2>Информация о сайте:</h2><button class='exit_2'>Закрыть</button></div><p class='description'>На данном сайте вы можете просматривать, а также и создавать определённые мероприятия.<br><br>1) Поиск мероприятий:<br><br> Для нахождения событий на какую-либо дату оставайтесь на главной странице, на которой будет присутствовать кнопка “Click me”. После её нажатия вы сможете выбрать дату, после чего должна отобразиться таблица с мероприятиями на выбранную дату!<br><br>2) Создание мероприятий:<br><br> Для создания мероприятия зайдите в профиль и найдите кнопку ”Внести мероприятие”. После этого откроется форма для заполнения. Внесите данные и нажмите на кнопку ”Сохранить”.</p>";
+    }
+  });
+
+  btn_wrapper.addEventListener("click", function (event) {
+    if (event.target.classList.contains("exit_2")) {
+      closeAllModals();
+    }
+  });
+
+  // создание формы для отправки отзыва или иного характера сообщения
+  sp_cl.addEventListener("click", () => {
+    sp.style.display = "none";
+    saveModalState("sp", false);
+  });
+
+  sp_interaction.addEventListener("click", () => {
+    toggleModal(sp, "block", "sp");
+  });
+
+  // события для блока с Мероприятиями
+  event_block_show.addEventListener("click", () => {
+    toggleModal(event_block, "flex", "event_block");
+  });
+
+  // Обработчик клика для закрытия блока событий
+  event_table_close.addEventListener("click", () => {
+    event_block.style.display = "none";
+    saveModalState("event_block", false);
+  });
+
+  // события для блока с Регистрацией
+  regis_bt.addEventListener("click", () => {
+    toggleModal(regis_modal_form, "flex", "regis_modal_form");
+  });
+
+  // клика для закрытия блока регистрации
+  regis_cl.addEventListener("click", () => {
+    regis_modal_form.style.display = "none";
+    saveModalState("regis_modal_form", false);
+  });
+
+  // события для отображения блока идентификации
+  lgn_fr_cl.addEventListener("click", () => {
+    lgn_fr.style.display = "none";
+    saveModalState("lgn_fr", false);
+  });
+
+  appear_lg_form.addEventListener("click", () => {
+    lgn_fr.style.display = "flex";
+    regis_modal_form.style.display = "none";
+    saveModalState("lgn_fr", true);
+  });
+
+  regis_show_up.addEventListener("click", () => {
+    lgn_fr.style.display = "none";
+    regis_modal_form.style.display = "flex";
+    saveModalState("regis_modal_form", true);
+  });
+});
