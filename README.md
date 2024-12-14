@@ -10,18 +10,16 @@
     + Встроенная система push-уведомлений обеспечивает безопасность при редактировании профиля(будет находится в следующих обновлениях).
 
 # `Image of the logo.`
-![alt text](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/images/logo.png)
+[![alt text](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/images/logo.png)](https://github.com/MerlinPaladin/EMS-event-management-system-/blob/main/sum/assets/images/logo.png)
 
 2. **Technology of the creation**
 + `FrontEnd`:
     + **Css**
     + **Html**
-    + **Laravel**
     + **JavaScript**
 
 + `BackEnd`:
     + **PHP v-8.1-8.2**
-    + **Laravel**
 
 + `Database`;
     + **MySql**
