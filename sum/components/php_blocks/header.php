@@ -13,6 +13,13 @@ session_start(); // Запуск сессии
         <button type="button" id="all_active_events">Все активные мероприятия</button>
         <a href="index.php"><button type="button" id="main_button">Главная</button></a>
         <button type="button" id="register_button">Регистрация</button>
+        <?php
+        if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true) {
+            echo '<button type="button" id="profile_button">Профиль</button>';
+        } else {
+            echo '<button type="button" id="register_button">Регистрация</button>';
+        }
+        ?>
     </div>
 </header>
 <hr>
